@@ -10,8 +10,8 @@ config_version=5
 
 [application]
 
-config/name="CMPM-17 Prototype"
-run/main_scene="uid://d4lyv84rlq0ey"
+config/name="CMPM17"
+run/main_scene="uid://c18b7nwkmin70"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -50,4 +50,4 @@ D={
 [rendering]
 
 rendering_device/driver.windows="d3d12"
-environment/defaults/default_clear_color=Color(0.40784314, 0.4745098, 0.62352943, 1)
+environment/defaults/default_clear_color=Color(0.96035105, 0.96035105, 0.96035093, 1)

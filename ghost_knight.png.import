@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ca6wwsov0erhj"
-path="res://.godot/imported/ghost_knight.png-e9bce0a032b67777424ce313f3de7d39.ctex"
+uid="uid://dj1n1ldlpnxxq"
+path="res://.godot/imported/ghost_knight.png-a8cee63c3753e96a1b3dfa5d8dbfc093.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/ghost_knight.png"
-dest_files=["res://.godot/imported/ghost_knight.png-e9bce0a032b67777424ce313f3de7d39.ctex"]
+source_file="res://ghost_knight.png"
+dest_files=["res://.godot/imported/ghost_knight.png-a8cee63c3753e96a1b3dfa5d8dbfc093.ctex"]
 
 [params]
 

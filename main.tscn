@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://c18b7nwkmin70"]
+
+[ext_resource type="PackedScene" uid="uid://bmafgh84mcxdr" path="res://enemy.tscn" id="1_ig7tw"]
+[ext_resource type="Script" uid="uid://c2d3lytwdne6x" path="res://player.gd" id="2_h2yge"]
+[ext_resource type="Texture2D" uid="uid://dj1n1ldlpnxxq" path="res://ghost_knight.png" id="3_h2yge"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tcxjo"]
+radius = 12.0
+
+[node name="Main" type="Node2D" unique_id=271589225]
+
+[node name="enemy" parent="." unique_id=535976895 instance=ExtResource("1_ig7tw")]
+position = Vector2(300, 200)
+scale = Vector2(2, 2)
+
+[node name="player" type="CharacterBody2D" parent="." unique_id=1156393952]
+position = Vector2(350, 200)
+script = ExtResource("2_h2yge")
+
+[node name="Sprite2D" type="Sprite2D" parent="player" unique_id=1288460182]
+position = Vector2(43.999996, 35)
+scale = Vector2(0.33599982, 0.33200005)
+texture = ExtResource("3_h2yge")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player" unique_id=1411276255]
+shape = SubResource("CircleShape2D_tcxjo")
