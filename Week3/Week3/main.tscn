@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://c18b7nwkmin70"]
+
+[ext_resource type="PackedScene" uid="uid://cv6jouadsivia" path="res://level_1.tscn" id="1_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://b7qdh68bs6q88" path="res://player.tscn" id="2_h2yge"]
+
+[node name="Main" type="Node2D" unique_id=271589225]
+
+[node name="level1" parent="." unique_id=1279582133 instance=ExtResource("1_0xm2m")]
+position = Vector2(-90, 30)
+
+[node name="player_backup" parent="." unique_id=308408819 instance=ExtResource("2_h2yge")]
+process_mode = 4
+visible = false
