@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://7tyrmxcbr14d"]
+
+[ext_resource type="Script" uid="uid://sq2oll6s37rr" path="res://enemy.gd" id="1_7k104"]
+[ext_resource type="Texture2D" uid="uid://kt48rsl56ohr" path="res://slime.png" id="2_4gyqm"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_iifgy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_4gyqm")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_4gyqm")
+}],
+"loop": 1,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tcxjo"]
+radius = 12.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4gyqm"]
+radius = 50.0
+
+[node name="enemy" type="CharacterBody2D" unique_id=535976895]
+script = ExtResource("1_7k104")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=571422626]
+visible = false
+sprite_frames = SubResource("SpriteFrames_iifgy")
+animation = &"idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=373482221]
+shape = SubResource("CircleShape2D_tcxjo")
+
+[node name="detection_area" type="Area2D" parent="." unique_id=61301324]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="detection_area" unique_id=1492661515]
+shape = SubResource("CircleShape2D_4gyqm")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1363886371]
+scale = Vector2(3, 3)
+texture = ExtResource("2_4gyqm")
+
+[connection signal="body_entered" from="detection_area" to="." method="_on_detection_area_body_entered"]
+[connection signal="body_exited" from="detection_area" to="." method="_on_detection_area_body_exited"]
